@@ -1,0 +1,173 @@
+
+.about {
+ width: 100%; 
+ height: 100%; 
+ position: relative;
+ background-color: white;  
+ top: 3em; 
+}
+
+.about__content {
+ width: 100%; 
+ height: 100%; 
+ background-color: white; 
+ top: -2em; 
+}
+
+.tab__title {
+ font-family: var(--font);
+ height: 100%; 
+ padding: 0; 
+ margin: 0;
+ display: block; 
+ position: relative;  
+ z-index: 4; 
+} 
+
+.about__about-tab, .about__projects-tab { 
+ width: 30%; 
+ height: 2em; 
+ display: inline-block;  
+ position: relative;
+ background: white; 
+ left: calc(50% - 30%); 
+ z-index: 2;
+ text-align: center; 
+ line-height: 2em; 
+ top: -2em; 
+ border-top-left-radius: 0.4em; 
+ border-top-right-radius: 0.4em;
+ transform: translateX(-0.5em);
+}
+
+.about__projects-tab {
+ transform: translateX(0.5em);
+ opacity: 0.6;
+}
+
+.about__about-tab::after, .about__projects-tab::after {
+ content: ""; 
+ position: relative;
+ display: block; 
+ width: calc(100% + 2em);
+ left: -1em;
+ top: -100%; 
+ height: 2em; 
+ background-color: white; 
+ clip-path: polygon(0% 100%, 1.07em 0.2em, calc(100% - 1.07em) 0.2em, 100% 100%, 0% 100%);
+}
+
+.content__personal-info {
+ background: "#c6c6c6";
+ box-shadow: 0px 0px 5px gray;
+ width: 50%; 
+ display: block; 
+ margin: auto;
+ padding: 2em; 
+ padding-top: 2em;   
+ padding-bottom: 2em; 
+ text-align: center;  
+ font-family: var(--font); 
+ border-radius: 10px;  
+} 
+
+.personal-info__profile {
+ width: 8em;
+ clip-path: circle(); 
+ display: block; 
+ margin: auto; 
+}
+
+.personal-info__summary {
+ font-family: inherit; 
+ width: 80%;  
+ display: block; 
+ margin: auto; 
+ line-height: 1.5em;  
+}
+
+.personal-info__details {
+ width: 100%; 
+ margin-top: 2em;  
+}
+
+.personal-info__details button {
+}
+
+.details__number {
+ display: inline-block;  
+ padding: 1em;
+ border: 2px solid dodgerblue;
+ color: dodgerblue;  
+ border-radius: 10px;
+ background: white; 
+}
+
+.details__resume {
+ display: inline-block; 
+ padding: 1em;
+ color: white; 
+ background: dodgerblue;
+ border-radius: 10px;
+ border: 2px solid dodgerblue;
+ margin-left: 2em; 
+}
+
+.about__skills {
+ background: "#c6c6c6";
+ width: 50%; 
+ display: block; 
+ margin: auto;
+ padding: 2em; 
+ padding-top: 2em;   
+ padding-bottom: 2em; 
+ position: relative;  
+ text-align: center;  
+ font-family: var(--font); 
+ border-radius: 10px;  
+ box-shadow: 0px 0px 5px gray;  
+ top: 2em; 
+}
+
+.skills__skill-panel {
+ text-align: center;
+ display: flex;
+ align-items: center; 
+ width: auto;  
+ border: 1px solid; 
+} 
+
+.skills__title {
+ font-size: 2em; 
+}
+
+.skill-panel__skills {
+ width: 100%;
+}
+
+.skill__list {
+ display: block; 
+ margin: auto; 
+ background: lightgray;
+ padding: 1em;
+ box-sizing: border-box; 
+ border-radius: 10px; 
+ font-size: 0.8em; 
+ width: max-content;  
+ max-width: 100%; 
+} 
+
+.skill-panel__description {
+}
+
+.skill-panel__skill {
+ display: block; 
+ margin: auto; 
+ width: 50%;  
+}
+
+.skill-percentage {
+ transform: scale(1);
+ display: block; 
+ margin: auto;  
+}

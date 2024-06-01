@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": "3.36.0"
+      }
+    ]
+  ], 
+  "plugins": [
+    "@babel/plugin-transform-react-jsx"  
+  ]
+}
