@@ -226,6 +226,15 @@
   display: block; 
  } 
 
+ .skill__click-message p {
+  margin: 0;  
+ }
+  
+ .skill__click-message i {
+  font-size: 2em; 
+  margin: 0;  
+ } 
+
 .phone {
   width: 80%;
   aspect-ratio: 1/1.7;

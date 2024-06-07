@@ -43,7 +43,7 @@ export default function About() {
         </>
        )} />
        <div className="skill__click-message">
-        <p>▲</p>
+        <i className="fas fa-sort-up"></i>
         <p>Press button to view resume.</p>
        </div>
       </div>
@@ -54,7 +54,7 @@ export default function About() {
          window.open(["https://scribler.imdeonrich.com","https://wtrw.imdeonrich.com","https://inkpad.imdeonrich.com"][window.getComputedStyle(document.querySelector("#carousel")).getPropertyValue("--current-slide") - 1], "_blank");
       }} />
        <div className="skill__click-message">
-        <p>▲</p>
+        <i className="fas fa-sort-up"></i>
         <p>Press button to open project.</p>
        </div>
      </div>
@@ -95,7 +95,6 @@ const leftSide = React.useRef(null);
 const rightSide = React.useRef(null);
 const [tiltSmoothness] = React.useState(8);
 const [maxRotation] = React.useState(30);
-const [windowDimensions, setWindowDimensions] = React.useState({width: window.innerWidth, height: window.innerHeight});
 
 React.useEffect(function() {
  box.current.dimensions = box.current.getBoundingClientRect();

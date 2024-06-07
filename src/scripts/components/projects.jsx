@@ -13,7 +13,7 @@ export default function Projects() {
    <div className="projects__content">
     <div className="content__projects">
      <Project title="Scribler" logo="/public/images/scribler_logo.png" description="Online writers platform where users can create an account and share, create and collaborate on written documents with other users." code="https://github.com/ZippCodder/Scribler" project="https://scribler.imdeonrich.com/" previews={["/public/images/scribler-preview-1.png","/public/images/scribler-preview-3.png","/public/images/scribler-preview-2.png"]}/> 
-     <Project title="WTRW" logo="/public/images/wtrw_logo.png" description="An online game where the objective is to collect weapons and eliminate as many enemies to get the highest score possible." code="https://github.com/ZippCodder/WTRW" project="https://wtrw.imdeonrich.com/" previews={["/public/images/wtrw-preview-1.png","/public/images/wtrw-preview-2.png","/public/images/wtrw-preview-3.png"]}/> 
+     <Project title="WTRW" logo="/public/images/wtrw_logo.png" description="An online shooting game where the objective is to collect weapons and eliminate as many enemies to get the highest score possible." code="https://github.com/ZippCodder/WTRW" project="https://wtrw.imdeonrich.com/" previews={["/public/images/wtrw-preview-1.png","/public/images/wtrw-preview-2.png","/public/images/wtrw-preview-3.png"]}/> 
      <Project title="Inkpad" logo="/public/images/inkpad_logo.png" description="Digital art program with ample tools for creating and downloading self made works of art." code="https://github.com/ZippCodder/inkpad-editor" project="https://inkpad.imdeonrich.com/" previews={["/public/images/inkpad-preview-1.png","/public/images/inkpad-preview-2.png","/public/images/inkpad-preview-3.png"]}/> 
     <button className="project__source" onClick={() => {window.open("https://github.com/ZippCodder/personal-portfolio","_blank")}}>View Portfolio Code</button> 
     </div>
@@ -41,6 +41,14 @@ function Project(props) {
 function Slideshow(props) {
  
  const [currentSlide, setCurrentSlide] = React.useState(0);
+ 
+ React.useEffect(function() {
+  let img2 = new Image();
+  img2.src = props.srcs[1];  
+  
+  let img3 = new Image();
+  img3.src = props.srcs[2];  
+ },[]);
 
  return (
   <div className="project__slideshow">
