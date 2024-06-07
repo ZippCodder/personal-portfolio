@@ -9,7 +9,7 @@ const server = protocol.createServer((process.env.MODE === "production") ? {key:
 server.on("request",(req,res) => {
  let contentType = "text/plain", file;
 
- if (req.url === "/") {
+ if (req.url === "/" || req.url === "/projects") {
  try {
   file = fs.readFileSync(__dirname + "/src/pages/index.html");
  } catch (err) {

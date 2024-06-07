@@ -11,11 +11,11 @@ export default function Header() {
         <i className="fab fa-dev"></i> 
         <i className="fab fa-codepen"></i>
       </div>
-      <button className="contact__email-button">Email Me</button>
+      <button className="contact__email-button" onClick={() => {window.open("https://mail.google.com/mail/u/0/?fs=1&to=deon.edward.rich@gmail.com&tf=cm", "_blank")}}>Email Me</button>
     </div>
   </header>
   <div className="sub-header">
-   <small className="sub-header__text">Portolio built with - HTML, CSS, React, Node.js</small>
+   <small className="sub-header__text">Portolio built with - <i className="fab fa-html5"></i><i className="fab fa-css3-alt"></i><i className="fab fa-js"></i><i className="fab fa-react"></i><i className="fab fa-node-js"></i></small>
   </div>
  </>
  );
