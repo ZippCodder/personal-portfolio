@@ -41,18 +41,12 @@ function Project(props) {
 function Slideshow(props) {
  
  const [currentSlide, setCurrentSlide] = React.useState(0);
- 
- React.useEffect(function() {
-  let img2 = new Image();
-  img2.src = props.previews[1];  
-  
-  let img3 = new Image();
-  img3.src = props.previews[2];  
- },[]);
 
  return (
   <div className="project__slideshow">
-   <img className="slideshow__image" src={(props.previews) ? props.previews[currentSlide]:undefined} />
+   <img className="slideshow__image" src={props.previews[0]} style={{display: (currentSlide == 0) ? "block":"none"}} />
+   <img className="slideshow__image" src={props.previews[1]} style={{display: (currentSlide == 1) ? "block":"none"}} />
+   <img className="slideshow__image" src={props.previews[2]} style={{display: (currentSlide == 2) ? "block":"none"}} />
    <div className="slideshow__buttons">
     <button className="slideshow__button slideshow__button-1" style={{backgroundColor: (currentSlide == 0) ? "gray":"white"}} onClick={() => {setCurrentSlide(0)}}></button>
     <button className="slideshow__button slideshow__button-2" style={{backgroundColor: (currentSlide == 1) ? "gray":"white"}} onClick={() => {setCurrentSlide(1)}}></button>
