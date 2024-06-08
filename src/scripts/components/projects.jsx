@@ -44,10 +44,10 @@ function Slideshow(props) {
  
  React.useEffect(function() {
   let img2 = new Image();
-  img2.src = props.srcs[1];  
+  img2.src = props.previews[1];  
   
   let img3 = new Image();
-  img3.src = props.srcs[2];  
+  img3.src = props.previews[2];  
  },[]);
 
  return (
