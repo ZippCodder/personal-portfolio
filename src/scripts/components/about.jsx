@@ -12,9 +12,9 @@ export default function About() {
   </div>
   <div className="about__content">
       <div className="about__socials">
-        <i className="fab fa-github-square" href="https://github.com/ZippCodder"></i>
-        <i className="fab fa-dev" href="https://dev.to/zippcodder"></i> 
-        <i className="fab fa-codepen" href="https://codepen.io/ZippCodder/"></i>
+        <a href="https://github.com/ZippCodder" target="_blank"><i className="fab fa-github-square"></i></a>
+        <a href="https://dev.to/zippcodder" target="_blank"><i className="fab fa-dev"></i></a> 
+        <a href="https://codepen.io/ZippCodder/" target="_blank"><i className="fab fa-codepen"></i></a>
       </div>
     <section className="content__personal-info">
       <img className="personal-info__profile" src="/public/images/profile.jpg"/>
