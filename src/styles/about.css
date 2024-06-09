@@ -86,6 +86,7 @@
  clip-path: circle(); 
  display: block; 
  margin: auto; 
+ background-color: #e6e6e6; 
 }
 
 .personal-info__summary {

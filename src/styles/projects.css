@@ -108,6 +108,7 @@
  width: min(20em, calc(100vw - 2em)); 
  aspect-ratio: 1.6/1;
  border-radius: 10px;  
+ background-color: #e6e6e6; 
 }
 
 .slideshow__buttons {
