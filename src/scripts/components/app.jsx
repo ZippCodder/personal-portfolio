@@ -5,6 +5,7 @@ import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import "../../styles/styles.css";
 import Header from "./header.jsx";
+import Footer from "./footer.jsx";
 import About from "./about.jsx";
 import Projects from "./projects.jsx";
 
@@ -27,6 +28,7 @@ return (
   <React.Fragment>
   <Header />
   <RouterProvider router={router} />
+  <Footer />
   </React.Fragment>
 );
 }

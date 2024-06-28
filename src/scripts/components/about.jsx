@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import "../../styles/about.css";
 
 export default function About() {
+ 
+const [open, setOpen] = React.useState(false); 
+ 
  return (
+<>
+ <EmailBox open={open} setOpen={setOpen} />
  <main className="about">
   <div className="about__about-tab">
     <p className="tab__title">About Me</p>
@@ -15,52 +20,54 @@ export default function About() {
         <a href="https://github.com/ZippCodder" target="_blank"><i className="fab fa-github-square"></i></a>
         <a href="https://dev.to/zippcodder" target="_blank"><i className="fab fa-dev"></i></a> 
         <a href="https://codepen.io/ZippCodder/" target="_blank"><i className="fab fa-codepen"></i></a>
+        <a href="https://www.linkedin.com/in/deon-edward-rich-283564300/" target="_blank"><i className="fab fa-linkedin"></i></a>
       </div>
     <section className="content__personal-info">
-      <img className="personal-info__profile" src="/public/images/profile.jpg"/>
-       <h1 className="personal-info__greeting">Hi, Im Deon!</h1>
-       <p className="personal-info__roles"><b>Frontend Developer | Backend Developer | UX/UI Designer</b></p>
-      <p className="personal-info__summary">
-       I'm a reliable and hardworking software developer from the United States with native fluency in English and Spanish. I have extensive experience in areas such as professional written and verbal communication, carrying out complex assignments in a timely manner and advanced problem solving. In my free time I enjoy reading, playing piano and working on personal programming projects. I’m looking to provide as much value as possible, and am eager to take every opportunity available to take in new knowledge and advance my skills through results-driven work as I pursue a career in web development.
-      </p>
-      <div className="personal-info__details">
-       <button className="details__number">+506 7063-8994</button>
-       <button onClick={() => {window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit?usp=sharing", "_blank")}} className="details__resume">View Resume</button>
-      </div>
-    </section>
-    <section className="about__skills">
-     <div className="skills__skill">
-      <h1>Skills</h1>
-      <small className="skill__hover-message">Hover to interact with phone</small>
-      <Phone color="black" name="skills-phone" action={() => {window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit?usp=sharing", "_blank")}} content={(
-        <>
-         <div className="skill__item">UX/UI Design</div>
-         <div className="skill__item">Front-end Scripting/Design</div>
-         <div className="skill__item">Back-end System Design</div>
-         <div className="skill__item">Native English and Spanish</div>
-         <div className="skill__item">Data Structures and Algorithms</div>
-         <div className="skill__item">Version Control</div>
-        </>
-       )} />
-       <div className="skill__click-message">
-        <i className="fas fa-sort-up"></i>
-        <p>Press button to view resume.</p>
-       </div>
-      </div>
-     <div className="skills__skill">
-      <h1>Projects</h1>
-      <small className="skill__hover-message">Hover to interact with phone</small>
-      <Phone color="white" name="projects-phone" content={<Carousel/>} action={function() {
-         window.open(["https://scribler.imdeonrich.com","https://wtrw.imdeonrich.com","https://inkpad.imdeonrich.com"][window.getComputedStyle(document.querySelector("#carousel")).getPropertyValue("--current-slide") - 1], "_blank");
-      }} />
-       <div className="skill__click-message">
-        <i className="fas fa-sort-up"></i>
-        <p>Press button to open project.</p>
-       </div>
+     <div className="personal-info__intro">
+      <h1 className="intro__heading"><mark className="heading3">Hi</mark><mark className="heading2">Im</mark><mark className="heading1">Deon</mark></h1><p className="intro__roles">Frontend Developer | Backend Developer | UX/UI Designer</p>
+      <p className="intro__paragraph">
+I'm a web developer from the United States with native fluency in English and Spanish alike. My aptitude lays with my excelent communication skills and my ability to quickly adapt and apply new knowledge to comply with what is required. With over 5 years of experience buiding fullstack applications with a range of Back-end and Front-end technologies, I'm eagerly searching for opportunities with which I can grow and provide my best work.</p>
+      <button className="intro__email-button" onClick={function(){
+        setOpen(true);  
+        window.location.hash = "email";
+       }}>Email Me</button>
+      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit","_blank")}}>View Resume</button>
      </div>
+    </section>
+    <p className="phones__interact-message">Hover over phones to interact.</p>
+    <section className="content__phones">
+      <Phone color="black" name="black-phone" action={function() {
+         window.open(["https://dev.to/zippcodder/complete-guide-to-building-games-in-the-browser-kp6","https://dev.to/zippcodder/understanding-speech-recognition-and-building-a-voice-controlled-to-do-list-3e5","https://dev.to/zippcodder/a-quick-guide-to-custom-html-elements-5f3b"][window.getComputedStyle(document.querySelector("#carousel")).getPropertyValue("--current-slide") - 1], "_blank");}} content={(
+      <>
+       <div className="phone__blog">
+        <h1 className="blog__title"><i className="fab fa-dev"></i> Blog Posts</h1>
+        <div className="blog__thumbnail">
+         <Carousel srcs={["/public/images/article1.png", "/public/images/article2.png", "/public/images/article3.png"]}/>
+        </div> 
+        <h1 className="blog__description"></h1>
+        <small className="blog__button-message">Press Button to View Post</small>
+       </div>
+      </>
+      )}/>
+      <Phone color="white" name="white-phone" content={(
+       <>
+        <div className="phone__skills">
+          <h1 className="skills__heading">Key Skills</h1>
+          <div className="skills__item skills__item-left"><i className="fab fa-html5"></i><p>HTML</p></div>
+          <div className="skills__item skills__item-right"><i className="fab fa-css3-alt"></i><p>CSS</p></div>
+          <div className="skills__item skills__item-left"><i className="fab fa-js"></i><p>Javascript</p></div>
+          <div className="skills__item skills__item-right"><i className="fab fa-react"></i><p>React</p></div>
+          <div className="skills__item skills__item-left"><i className="fab fa-node-js"></i><p>NodeJS</p></div>
+          <div className="skills__item skills__item-right"><i className="fas fa-database"></i><p>MongoDB/NoSQL</p></div>
+          <div className="skills__item skills__item-left"><i className="fab fa-git-alt"></i><p>Git/Version Control</p></div>
+        <small className="skills__button-message">Press Button to View Resume</small>
+        </div> 
+       </>
+      )} action={function(){window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit","_blank")}}/>
     </section>
   </div> 
  </main>
+</>
  ); 
 }
 
@@ -72,10 +79,10 @@ function Carousel(props) {
 
  return (
    <div id="carousel" ref={container} style={{transform: transform, transition: transition}}> 
-    <img id={1} className="carousel__image" src="/public/images/project1.png" />
-    <img className="carousel__image" src="/public/images/project2.png" />
-    <img className="carousel__image" src="/public/images/project3.png" />
-    <img id={2} className="carousel__image" src="/public/images/project1.png" />
+    <img id={1} className="carousel__image" src={props.srcs[0]} />
+    <img className="carousel__image" src={props.srcs[1]} />
+    <img className="carousel__image" src={props.srcs[2]} />
+    <img id={2} className="carousel__image" src={props.srcs[0]} />
    </div>
  );
 }
@@ -150,4 +157,48 @@ return (
   </div>
 </div>
 );
+}
+
+function EmailBox(props) {
+
+ const subject = React.useRef(null);
+ const body = React.useRef(null);
+ const [sent, setSent] = React.useState(false);
+
+ function send() {
+  if (body.current.value !== "") {
+   fetch("/email",{
+     method: "POST", 
+     body: JSON.stringify({
+       subject: "Personal Portfolio Inbox - " + subject.current.value.trim(), 
+       body: body.current.value
+     })
+   });
+   subject.current.value = ""; 
+   body.current.value = "";
+   setSent(true);
+  }
+ }
+
+ function close() {
+  props.setOpen(false); 
+  window.location.hash = "";
+ }
+
+ return (
+ <>
+  <div id="email" className="emailBox" style={{display: (props.open) ? "block":"none"}}>
+   <h1 className="emailBox__heading">Email Me</h1>
+   <p className="emailBox__email">deon.edward.rich@gmail.com</p>
+   <input className="emailBox__subject" ref={subject} placeholder="..." onFocus={function(){setSent(false)}}></input>
+   <textarea className="emailBox__body" ref={body} resize="false" placeholder="..." onFocus={function(){setSent(false)}}></textarea>
+   <p className="emailBox__sent-message" style={{display: (sent) ? "block":"none"}}>Email was successfully sent!</p>
+   <button className="emailBox__send" onClick={send}>Send</button>
+   <button className="emailBox__close" onClick={function(){
+    close(); 
+    setSent(false);
+   }}>Close</button> 
+  </div>
+ </>
+ );
 }
