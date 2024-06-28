@@ -17,10 +17,10 @@ const [open, setOpen] = React.useState(false);
   </div>
   <div className="about__content">
       <div className="about__socials">
+        <a href="https://www.linkedin.com/in/deon-edward-rich-283564300/" target="_blank"><i className="fab fa-linkedin"></i></a>
         <a href="https://github.com/ZippCodder" target="_blank"><i className="fab fa-github-square"></i></a>
         <a href="https://dev.to/zippcodder" target="_blank"><i className="fab fa-dev"></i></a> 
         <a href="https://codepen.io/ZippCodder/" target="_blank"><i className="fab fa-codepen"></i></a>
-        <a href="https://www.linkedin.com/in/deon-edward-rich-283564300/" target="_blank"><i className="fab fa-linkedin"></i></a>
       </div>
     <section className="content__personal-info">
      <div className="personal-info__intro">
