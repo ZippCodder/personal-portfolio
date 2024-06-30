@@ -167,16 +167,15 @@ function EmailBox(props) {
 
  function send() {
   if (body.current.value !== "") {
-   fetch("/email",{
-     method: "POST", 
-     body: JSON.stringify({
-       subject: "Personal Portfolio Inbox - " + subject.current.value.trim(), 
-       body: body.current.value
-     })
-   });
-   subject.current.value = ""; 
-   body.current.value = "";
-   setSent(true);
+   emailjs.init({publicKey: "cM1C_9QUhxtpr6HO3"}); 
+   emailjs.send("service_vdflixu", "template_g8h5soh", {subject: subject.current.value, message: body.current.value}).then(
+     (response) => {
+       console.log('email sent.', response.status, response.text);
+    },
+    (error) => {
+        console.log('email failed to send.', error);
+     },
+   );
   }
  }
 
