@@ -169,13 +169,16 @@ function EmailBox(props) {
   if (body.current.value !== "") {
    emailjs.init({publicKey: "cM1C_9QUhxtpr6HO3"}); 
    emailjs.send("service_vdflixu", "template_g8h5soh", {subject: subject.current.value, message: body.current.value}).then(
-     (response) => {
-       console.log('email sent.', response.status, response.text);
+    (response) => {
+      console.log("email sent.");
     },
     (error) => {
         console.log('email failed to send.', error);
      },
    );
+   setSent(true);
+   subject.current.value = ""; 
+   body.current.value = ""; 
   }
  }
 
