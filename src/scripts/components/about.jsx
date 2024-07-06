@@ -63,7 +63,7 @@ I'm a web developer from the United States with native fluency in English and Sp
         <small className="skills__button-message">Press Button to View Resume</small>
         </div> 
        </>
-      )} action={function(){window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit","_blank")}}/>
+      )} action={function(){window.open("https://docs.google.com/document/d/14m2Fk9plJpVIDVVwx-2k09BA-CIVnppmPNgINItdBio/edit?usp=sharing","_blank")}}/>
     </section>
   </div> 
  </main>
