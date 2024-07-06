@@ -31,7 +31,7 @@ I'm a web developer from the United States with native fluency in English and Sp
         setOpen(true);  
         window.location.hash = "email";
        }}>Email Me</button>
-      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/12I5aUzHxtR3imxBhnZyrwhuYnGUlQE-ldYc88sW40KA/edit","_blank")}}>View Resume</button>
+      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/14m2Fk9plJpVIDVVwx-2k09BA-CIVnppmPNgINItdBio/edit?usp=sharing","_blank")}}>View Resume</button>
      </div>
     </section>
     <p className="phones__interact-message">Hover over phones to interact.</p>
