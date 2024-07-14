@@ -12,11 +12,9 @@ export default function Projects() {
    </div>
    <div className="projects__content">
     <div className="content__projects">
-     <h1 className="projects__title">Main Projects</h1>
      <Project title="Scribler" logo="/public/images/scribler_logo.png" description="Online writers platform where users can create an account and share, create and collaborate on written documents with other users." code="https://github.com/ZippCodder/Scribler" project="https://scribler.imdeonrich.com/" previews={["/public/images/scribler-preview-1.png","/public/images/scribler-preview-3.png","/public/images/scribler-preview-2.png"]} subtitle="Writers Platform" tech={["HTML, CSS, Javascript", "Node.JS","MongoDB"]}/> 
      <Project title="WTRW" logo="/public/images/wtrw_logo.png" description="An online shooting game where the objective is to collect weapons and eliminate as many enemies to get the highest score possible." code="https://github.com/ZippCodder/WTRW" project="https://wtrw.imdeonrich.com/" previews={["/public/images/wtrw-preview-1.png","/public/images/wtrw-preview-2.png","/public/images/wtrw-preview-3.png"]} subtitle="Online Game" tech={["HTML, CSS, Javascript", "WebGL", "Graphic Design", "DSA"]}/> 
      <Project title="Inkpad" logo="/public/images/inkpad_logo.png" description="Digital art program with ample tools for creating and downloading self made works of art." code="https://github.com/ZippCodder/inkpad-editor" project="https://inkpad.imdeonrich.com/" subtitle="Digital Art Program" previews={["/public/images/inkpad-preview-1.png","/public/images/inkpad-preview-2.png","/public/images/inkpad-preview-3.png"]} tech={["HTML, CSS, Javascript", "Canvas API", "UX/UI"]}/> 
-     <h1 className="projects__title">Other Projects</h1>
      <Project title="Audio Visualizer" description="An audio visualizer built with the Web Audio API." codepen={true} project="https://codepen.io/ZippCodder/full/OJRvJpN" code="https://codepen.io/ZippCodder/pen/OJRvJpN" previews={["/public/images/audio-visualizer-thumbnail.png"]} tech={["Javascript", "HTML Canvas", "Web Audio API"]}/> 
      <Project title="React Data Components" description="Dynamic React components for visualizing basic data sets." codepen={true} project="https://codepen.io/ZippCodder/full/GRjdeZe" code="https://codepen.io/ZippCodder/pen/GRjdeZe?editors=0010" previews={["/public/images/react-data-components-thumbnail.png"]} tech={["React", "Javascript", "SVG"]}/> 
      <Project title="Voice Controlled To-Do List" description="A voice controlled to-do list application built using the Web Speech API." codepen={true} code="https://codepen.io/ZippCodder/pen/wvqrBOe" project="https://codepen.io/ZippCodder/full/wvqrBOe" previews={["/public/images/todo-thumbnail.png"]} tech={["HTML, CSS, Javascript", "Web Speech API"]}/> 
@@ -42,7 +40,7 @@ function Project(props) {
      <p className="info__description">{props.description}</p>
      <div className="info__buttons">
       <a onClick={() => {window.open(props.code, "_blank")}} target="_blank"><button className="buttons__code">See Code</button></a>
-      <a onClick={() => {window.open(props.project, "_blank")}} target="_blank"><button className="buttons__project">Open Project</button></a>
+      <a onClick={() => {window.open(props.project, "_blank")}} target="_blank"><button className="buttons__project">Open Project <i className="fas fa-project-diagram"></i></button></a>
      </div>
     </div>
   </div>

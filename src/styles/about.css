@@ -532,6 +532,14 @@
  user-select: auto;     
 }
 
+.intro__resume-button i {
+ padding-left: 0.5em;  
+}
+
+.intro__resume-button:hover {
+ background: #1466b6;
+}
+
 .heading1 {
  opacity: 0.9;
 }
@@ -548,15 +556,25 @@ mark {
  background: none; 
 }
 
+.bottom-line {
+ width: 50%; 
+ max-width: 900px; 
+ border-bottom: 1px solid #d1d1d1;
+ margin: auto; 
+ display: block; 
+}
+
 .content__phones {
- display: flex;
- width: 100%; 
+ display: flex; 
  height: max-content;
  grid-gap: 4em; 
  position: relative;  
  font-family: var(--font);  
  justify-content: center;  
- text-align: center;   
+ text-align: center;  
+ margin: auto;
+ padding-bottom: 4em;  
+ width: 100%; 
 }
 
 .phones__interact-message {
@@ -626,6 +644,7 @@ mark {
 
 .phone {
   width: 18em;
+  min-width: 18em; 
   aspect-ratio: 1/1.7;
   transform: perspective(300px) rotateX(0deg) rotateY(0deg);
   transition: transform 0.2s ease;
