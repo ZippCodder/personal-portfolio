@@ -31,7 +31,7 @@ I'm a web developer from the United States with native fluency in English and Sp
         setOpen(true);  
         window.location.hash = "email";
        }}>Email Me</button>
-      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/14m2Fk9plJpVIDVVwx-2k09BA-CIVnppmPNgINItdBio/edit?usp=sharing","_blank")}}>View Resume <i className="fas fa-file"></i></button>
+      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}>View Resume <i className="fas fa-file"></i></button>
      </div>
     </section>
     <p className="phones__interact-message">Hover over phones to interact.</p>
@@ -63,7 +63,7 @@ I'm a web developer from the United States with native fluency in English and Sp
         <small className="skills__button-message">Press Button to View Resume</small>
         </div> 
        </>
-      )} action={function(){window.open("https://docs.google.com/document/d/14m2Fk9plJpVIDVVwx-2k09BA-CIVnppmPNgINItdBio/edit?usp=sharing","_blank")}}/>
+      )} action={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}/>
     </section>
     <div className="bottom-line"></div>
   </div> 
