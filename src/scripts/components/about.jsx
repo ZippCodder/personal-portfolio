@@ -24,9 +24,9 @@ const [open, setOpen] = React.useState(false);
       </div>
     <section className="content__personal-info">
      <div className="personal-info__intro">
-      <h1 className="intro__heading">Hi, I'm Deon!</h1><p className="intro__roles">Frontend Developer | Backend Developer | UX/UI Designer</p>
+      <h1 className="intro__heading">Hi, I'm Deon!</h1><p className="intro__roles">Frontend Developer | Backend Developer | UI/UX Designer</p>
       <p className="intro__paragraph">
-I'm a web developer from the United States with native fluency in English and Spanish alike. My aptitude lays with my excelent communication skills and my ability to quickly adapt and apply new knowledge to comply with what is required. With over 5 years of experience buiding fullstack applications with a range of Back-end and Front-end technologies, I'm eagerly searching for opportunities with which I can grow and provide my best work.</p>
+I'm a web developer from the United States with native fluency in English and Spanish alike. My aptitude lays with my excelent communication skills and my ability to quickly adapt and apply new knowledge to comply with ever-changing business requirements. With over 5 years of experience buiding fullstack applications with a range of Back-end and Front-end technologies, I'm eagerly searching for opportunities with which I can grow and provide my best work.</p>
       <button className="intro__email-button" onClick={function(){
         setOpen(true);  
         window.location.hash = "email";

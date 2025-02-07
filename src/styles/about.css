@@ -520,11 +520,11 @@
 }
 
 .intro__resume-button {
- border-radius: 10px; 
- background: #2586e6; 
+ border-radius: 10px;  
  padding: 1em;
- color: white;
- border: none;
+ color: black;
+ background: #E8E8E8;
+ border: none; 
  margin-left: 2em; 
  padding-left: 2em; 
  padding-right: 2em;  
@@ -534,10 +534,6 @@
 
 .intro__resume-button i {
  padding-left: 0.5em;  
-}
-
-.intro__resume-button:hover {
- background: #1466b6;
 }
 
 .heading1 {
