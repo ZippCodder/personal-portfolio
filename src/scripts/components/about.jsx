@@ -16,6 +16,7 @@ const [open, setOpen] = React.useState(false);
     <Link to="/projects"><p className="tab__title">My Projects</p></Link>
   </div>
   <div className="about__content">
+  <img src="/public/images/paperclip.png" className="paperclip" />
       <div className="about__socials">
         <a href="https://www.linkedin.com/in/deon-edward-rich-283564300/" target="_blank"><i className="fab fa-linkedin"></i></a>
         <a href="https://github.com/ZippCodder" target="_blank"><i className="fab fa-github-square"></i></a>
@@ -24,9 +25,7 @@ const [open, setOpen] = React.useState(false);
       </div>
     <section className="content__personal-info">
      <div className="personal-info__intro">
-      <h1 className="intro__heading">Hi, I'm Deon!</h1><p className="intro__roles">Frontend Developer | Backend Developer | UI/UX Designer</p>
-      <p className="intro__paragraph">
-I'm a web developer from the United States with native fluency in English and Spanish alike. My aptitude lays with my excelent communication skills and my ability to quickly adapt and apply new knowledge to comply with ever-changing business requirements. With over 5 years of experience buiding fullstack applications with a range of Back-end and Front-end technologies, I'm eagerly searching for opportunities with which I can grow and provide my best work.</p>
+      <h1 className="intro__heading">Hi, I'm Deon.</h1><p className="intro__roles">Frontend Developer | Backend Developer</p>
       <button className="intro__email-button" onClick={function(){
         setOpen(true);  
         window.location.hash = "email";
@@ -34,7 +33,6 @@ I'm a web developer from the United States with native fluency in English and Sp
       <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}>View Resume <i className="fas fa-file"></i></button>
      </div>
     </section>
-    <p className="phones__interact-message">Hover over phones to interact.</p>
     <section className="content__phones">
       <Phone color="black" name="black-phone" action={function() {
          window.open(["https://dev.to/zippcodder/complete-guide-to-building-games-in-the-browser-kp6","https://dev.to/zippcodder/understanding-speech-recognition-and-building-a-voice-controlled-to-do-list-3e5","https://dev.to/zippcodder/a-quick-guide-to-custom-html-elements-5f3b"][window.getComputedStyle(document.querySelector("#carousel")).getPropertyValue("--current-slide") - 1], "_blank");}} content={(
@@ -65,7 +63,6 @@ I'm a web developer from the United States with native fluency in English and Sp
        </>
       )} action={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}/>
     </section>
-    <div className="bottom-line"></div>
   </div> 
  </main>
 </>

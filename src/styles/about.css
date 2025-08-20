@@ -16,7 +16,9 @@
  height: max-content;
  background-color: white;
  padding-top: 2em; 
- top: -2em; 
+ top: -2em;
+ font-family: var(--second-font);
+ box-shadow: 0px 0px 2px gray; 
 }
 
 .tab__title {
@@ -505,6 +507,7 @@
  margin: 0;
  font-size: 0.7em; 
  letter-spacing: 0.1em;
+ margin-bottom: 4em;
 }
 
 .intro__email-button {
@@ -550,14 +553,6 @@
 
 mark {
  background: none; 
-}
-
-.bottom-line {
- width: 50%; 
- max-width: 900px; 
- border-bottom: 1px solid #c1c1c1;
- margin: auto; 
- display: block; 
 }
 
 .content__phones {
