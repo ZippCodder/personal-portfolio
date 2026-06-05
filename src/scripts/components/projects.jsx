@@ -13,8 +13,8 @@ export default function Projects() {
   <main className="projects"> 
    <div className="projects__content">
     <div className="content__projects">
-     <Project title="WTRW" logo="/public/images/wtrw_logo.png" description="A WebGL based shooting game with complex game mechanics." code="https://github.com/ZippCodder/WTRW" project="https://wtrw.imdeonrich.com/" previews={["/public/images/wtrw-preview-1.png","/public/images/wtrw-preview-2.png","/public/images/wtrw-preview-3.png"]} subtitle="Online Game" tech={["HTML, CSS, Javascript", "WebGL", "Graphic Design", "DSA"]}/> 
-     <Project title="Inkpad" logo="/public/images/inkpad_logo.png" description="Digital art program with ample tools for creating and downloading digital art." code="https://github.com/ZippCodder/inkpad-editor" project="https://inkpad.imdeonrich.com/" subtitle="Digital Art Program" previews={["/public/images/inkpad-preview-1.png","/public/images/inkpad-preview-2.png","/public/images/inkpad-preview-3.png"]} tech={["HTML, CSS, Javascript", "Canvas API", "UX/UI"]}/> 
+     <Project title="WTRW" logo="/public/images/wtrw_logo.png" description="A WebGL based shooting game with complex game mechanics." code="https://github.com/ZippCodder/WTRW" project="https://deonrich.dev:5000/" previews={["/public/images/wtrw-preview-1.png","/public/images/wtrw-preview-2.png","/public/images/wtrw-preview-3.png"]} subtitle="Online Game" tech={["HTML, CSS, Javascript", "WebGL", "Graphic Design", "DSA"]}/> 
+     <Project title="Inkpad" logo="/public/images/inkpad_logo.png" description="Digital art program with ample tools for creating and downloading digital art." code="https://github.com/ZippCodder/inkpad-editor" project="https://deonrich.dev:3000/" subtitle="Digital Art Program" previews={["/public/images/inkpad-preview-1.png","/public/images/inkpad-preview-2.png","/public/images/inkpad-preview-3.png"]} tech={["HTML, CSS, Javascript", "Canvas API", "UX/UI"]}/> 
      <Project title="Audio Visualizer" description="An audio visualizer built with the Web Audio API." codepen={true} project="https://codepen.io/ZippCodder/full/OJRvJpN" code="https://codepen.io/ZippCodder/pen/OJRvJpN" previews={["/public/images/audio-visualizer-thumbnail.png"]} tech={["Javascript", "HTML Canvas", "Web Audio API"]}/> 
      <Project title="React Data Components" description="Dynamic React components for visualizing basic data sets." codepen={true} project="https://codepen.io/ZippCodder/full/GRjdeZe" code="https://codepen.io/ZippCodder/pen/GRjdeZe?editors=0010" previews={["/public/images/react-data-components-thumbnail.png"]} tech={["React", "Javascript", "SVG"]}/> 
      <Project title="Voice Controlled To-Do List" description="A voice controlled to-do list application built using the Web Speech API." codepen={true} code="https://codepen.io/ZippCodder/pen/wvqrBOe" project="https://codepen.io/ZippCodder/full/wvqrBOe" previews={["/public/images/todo-thumbnail.png"]} tech={["HTML, CSS, Javascript", "Web Speech API"]}/> 
@@ -34,7 +34,7 @@ function Project(props) {
      <h1 className="info__title">{props.title}</h1>
      <p className="info__description">{props.description}</p>
      <div className="info__buttons">
-      <a onClick={() => {window.open(props.code, "_blank")}} target="_blank"><button className="buttons__code outfit-regular">See Code</button></a>
+      <a onClick={() => {window.open(props.code, "_blank")}} target="_blank"><button className="buttons__code outfit-regular">See Details</button></a>
       <a onClick={() => {window.open(props.project, "_blank")}} target="_blank"><button className="buttons__project outfit-regular">Open Project <i className="fa-solid fa-display"></i></button></a>
      </div>
     </div>
