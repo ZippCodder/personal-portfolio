@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "../../styles/about.css";
+import Header from "./header.jsx";
 
 export default function About() {
  
@@ -7,66 +7,36 @@ const [open, setOpen] = React.useState(false);
  
  return (
 <>
+ <Header openEmail={setOpen} page={0} />
  <EmailBox open={open} setOpen={setOpen} />
- <main className="about">
-  <div className="about__about-tab">
-    <p className="tab__title">About Me</p>
-  </div>
-  <div className="about__projects-tab">
-    <Link to="/projects"><p className="tab__title">My Projects</p></Link>
-  </div>
-  <div className="about__content">
-  <img src="/public/images/paperclip.png" className="paperclip" />
-      <div className="about__socials">
-        <a href="https://www.linkedin.com/in/deon-edward-rich-283564300/" target="_blank"><i className="fab fa-linkedin"></i></a>
-        <a href="https://github.com/ZippCodder" target="_blank"><i className="fab fa-github-square"></i></a>
-        <a href="https://dev.to/zippcodder" target="_blank"><i className="fab fa-dev"></i></a> 
-        <a href="https://codepen.io/ZippCodder/" target="_blank"><i className="fab fa-codepen"></i></a>
-      </div>
-    <section className="content__personal-info">
-     <div className="personal-info__intro">
-      <h1 className="intro__heading">Hi, I'm Deon.</h1><p className="intro__roles">Frontend Developer | Backend Developer</p>
-      <button className="intro__email-button" onClick={function(){
-        setOpen(true);  
-        window.location.hash = "email";
-       }}>Email Me</button>
-      <button className="intro__resume-button" onClick={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}>View Resume <i className="fas fa-file"></i></button>
-     </div>
-    </section>
-    <section className="content__phones">
-      <Phone color="black" name="black-phone" action={function() {
-         window.open(["https://dev.to/zippcodder/complete-guide-to-building-games-in-the-browser-kp6","https://dev.to/zippcodder/understanding-speech-recognition-and-building-a-voice-controlled-to-do-list-3e5","https://dev.to/zippcodder/a-quick-guide-to-custom-html-elements-5f3b"][window.getComputedStyle(document.querySelector("#carousel")).getPropertyValue("--current-slide") - 1], "_blank");}} content={(
-      <>
-       <div className="phone__blog">
-        <h1 className="blog__title"><i className="fab fa-dev"></i> Blog Posts</h1>
-        <div className="blog__thumbnail">
-         <Carousel srcs={["/public/images/article1.png", "/public/images/article2.png", "/public/images/article3.png"]}/>
-        </div> 
-        <h1 className="blog__description"></h1>
-        <small className="blog__button-message">Press Button to View Post</small>
-       </div>
-      </>
-      )}/>
-      <Phone color="white" name="white-phone" content={(
-       <>
-        <div className="phone__skills">
-          <h1 className="skills__heading">Key Skills</h1>
-          <div className="skills__item skills__item-left"><i className="fab fa-html5"></i><p>HTML</p></div>
-          <div className="skills__item skills__item-right"><i className="fab fa-css3-alt"></i><p>CSS</p></div>
-          <div className="skills__item skills__item-left"><i className="fab fa-js"></i><p>Javascript</p></div>
-          <div className="skills__item skills__item-right"><i className="fab fa-react"></i><p>React</p></div>
-          <div className="skills__item skills__item-left"><i className="fab fa-node-js"></i><p>NodeJS</p></div>
-          <div className="skills__item skills__item-right"><i className="fas fa-database"></i><p>MongoDB/NoSQL</p></div>
-          <div className="skills__item skills__item-left"><i className="fab fa-git-alt"></i><p>Git/Version Control</p></div>
-        <small className="skills__button-message">Press Button to View Resume</small>
-        </div> 
-       </>
-      )} action={function(){window.open("https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/edit?usp=sharing","_blank")}}/>
-    </section>
+ <main className="about source-code-pro-regular">
+  <div className="content">
+   <article className="article outfit-regular">
+    <h3 className="article__heading outfit-regular">Deon Rich <img className="profile-photo" src="/public/images/profile.jpg"/></h3>
+    <p className="article__paragraph">Full-stack developer with 5+ years of study and experience building software from the ground up. I excel with discipline, problem-solving and adapting to business needs. <br/><br/>Looking for a long-term role where I can make a real impact. If you value ownership and relentless improvement, let's talk!
+    </p>
+   </article>
+   <article className="article outfit-regular">
+    <h3 className="article__heading--small">Proficiency <small>HTML, CSS, React, Node.js, MongoDB</small></h3>
+    <div className="article__stats">
+     <Competency name="Front-end Development" percent="90" />
+     <Competency name="Back-end Development" percent="60" />
+    </div>
+   </article>
+   <a className="article__heading--small resume-button outfit-regular" href="https://docs.google.com/document/d/15Ahq06kuk_JcYS-UgaYH4zJlPyL8dTWSDNj_o1141tc/" target="_blank">See Resume <i className="fa-solid fa-file"></i></a>
   </div> 
  </main>
 </>
  ); 
+}
+
+function Competency(props) {
+  return (
+   <div className="article__bar problem-solving">
+    <p className="bar-label">{props.name}</p>
+    <div style={{width: `${props.percent}%`}}></div>
+   </div>
+  );
 }
 
 function Carousel(props) {
@@ -157,7 +127,7 @@ return (
 );
 }
 
-function EmailBox(props) {
+export function EmailBox(props) {
 
  const subject = React.useRef(null);
  const body = React.useRef(null);
@@ -187,14 +157,14 @@ function EmailBox(props) {
 
  return (
  <>
-  <div id="email" className="emailBox" style={{display: (props.open) ? "block":"none"}}>
+  <div id="email" className="emailBox outfit-regular" style={{display: (props.open) ? "block":"none"}}>
    <h1 className="emailBox__heading">Email Me</h1>
    <p className="emailBox__email">deon.edward.rich@gmail.com</p>
-   <input className="emailBox__subject" ref={subject} placeholder="..." onFocus={function(){setSent(false)}}></input>
-   <textarea className="emailBox__body" ref={body} resize="false" placeholder="..." onFocus={function(){setSent(false)}}></textarea>
+   <input className="emailBox__subject" ref={subject} onFocus={function(){setSent(false)}}></input>
+   <textarea className="emailBox__body" ref={body} resize="false" onFocus={function(){setSent(false)}}></textarea>
    <p className="emailBox__sent-message" style={{display: (sent) ? "block":"none"}}>Email was successfully sent!</p>
-   <button className="emailBox__send" onClick={send}>Send</button>
-   <button className="emailBox__close" onClick={function(){
+   <button className="emailBox__send outfit-regular" onClick={send}>Send</button>
+   <button className="emailBox__close outfit-regular" onClick={function(){
     close(); 
     setSent(false);
    }}>Close</button> 
